@@ -1,0 +1,65 @@
+﻿@model NYKalleMaintV01.Models.tblSpil
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details Spil - @ViewBag.SpillerNavn</h2>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CN_SpilPK, URLspillerId = ViewBag.URLspillerId }) |
+    @Html.ActionLink("Back to List", "Index", new { URLspillerId = ViewBag.URLspillerId })
+</div>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpilDato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpilDato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpilSesson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpilSesson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpilKalleKamel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpilKalleKamel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpilPlacering)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpilPlacering)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpilGennemsnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpilGennemsnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSpiller.CN_SpillerForNavn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSpiller.CN_SpillerForNavn)
+        </dd>
+
+    </dl>
+</div>
+

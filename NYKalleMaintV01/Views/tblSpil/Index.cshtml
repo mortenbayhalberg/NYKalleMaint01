@@ -1,0 +1,67 @@
+﻿@model IEnumerable<NYKalleMaintV01.Models.tblSpil>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index Spil - @ViewBag.SpillerNavn</h2>
+
+<div>
+    @Html.ActionLink("Create New", "Create", new { URLspillerId = ViewBag.URLspillerId }) |
+    @Html.ActionLink("Back to List", "Index", "Home")
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_SpilDato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_SpilSesson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_SpilKalleKamel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_SpilPlacering)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_SpilGennemsnit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSpiller.CN_SpillerForNavn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_SpilDato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_SpilSesson)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_SpilKalleKamel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_SpilPlacering)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_SpilGennemsnit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSpiller.CN_SpillerForNavn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CN_SpilPK, URLspillerId = ViewBag.URLspillerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CN_SpilPK, URLspillerId = ViewBag.URLspillerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CN_SpilPK, URLspillerId = ViewBag.URLspillerId }) |
+            @Html.ActionLink("Frame", "Index", "tblFrame", new { URLspillerId = ViewBag.URLspillerId, URLspilId = item.CN_SpilPK }, null )
+            @* Jørn har vist mig denne: <a href="@Url.Action( "Index", "tblFrame", new { id=-1, URLspillerId = ViewBag.URLspillerId, URLspilId = item.CN_SpilPK } )">Frame</a>*@
+        </td>
+    </tr>
+}
+
+</table>

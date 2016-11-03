@@ -1,0 +1,146 @@
+﻿@model NYKalleMaintV01.Models.tblSpiller
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete - Spiller</h2>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerForNavn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerForNavn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerEfterNavn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerEfterNavn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerInit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerInit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerOptDato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerOptDato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerUdMeldDato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerUdMeldDato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerFormand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerFormand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerNastFormand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerNastFormand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerKasser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerKasser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerRevisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerRevisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerSkemaAnsv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerSkemaAnsv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_SpillerWebAnsv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_SpillerWebAnsv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_EMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_EMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_AktivMedl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_AktivMedl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_PassivMedl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_PassivMedl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_ProveMedl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_ProveMedl)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    }
+</div>

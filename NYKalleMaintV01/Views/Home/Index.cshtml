@@ -1,0 +1,122 @@
+﻿@model IEnumerable<NYKalleMaintV01.Models.tblSpiller>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index - Spiller</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_SpillerForNavn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_SpillerEfterNavn)
+        </th>
+        @*
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerInit)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerOptDato)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerUdMeldDato)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerFormand)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerNastFormand)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerKasser)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerRevisor)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerSkemaAnsv)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_SpillerWebAnsv)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_EMail)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_AktivMedl)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_PassivMedl)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CN_ProveMedl)
+    </th>
+        *@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_SpillerForNavn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_SpillerEfterNavn)
+        </td>
+        @*
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerInit)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerOptDato)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerUdMeldDato)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerFormand)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerNastFormand)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerKasser)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerRevisor)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerSkemaAnsv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_SpillerWebAnsv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_EMail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_AktivMedl)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_PassivMedl)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CN_ProveMedl)
+    </td>
+        *@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.CN_SpillerPK }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CN_SpillerPK }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CN_SpillerPK }) |
+            @Html.ActionLink("Games", "Index", "tblSpil", new { URLspillerId = item.CN_SpillerPK }, item.CN_SpillerPK)
+        </td>
+</tr>
+}
+
+</table>

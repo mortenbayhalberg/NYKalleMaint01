@@ -1,0 +1,45 @@
+﻿@model NYKalleMaintV01.Models.tblFrame
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details Frame - @ViewBag.spillerNavn</h2>
+
+
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CN_FramePK, URLspillerId = ViewBag.URLspillerId, URLspilId = ViewBag.URLspilId }) |
+    @Html.ActionLink("Back to List", "Index", new { URLspillerId = ViewBag.URLspillerId, URLspilId = ViewBag.URLspilId })
+
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_FrameNr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_FrameNr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CN_FrameScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CN_FrameScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSpil.CN_SpilPK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSpil.CN_SpilPK)
+        </dd>
+
+    </dl>
+</div>
+

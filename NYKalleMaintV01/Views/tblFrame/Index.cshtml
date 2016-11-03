@@ -1,0 +1,47 @@
+﻿@model IEnumerable<NYKalleMaintV01.Models.tblFrame>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index Frame - @ViewBag.SpillerNavn</h2>
+
+<div>
+    @Html.ActionLink("Create New", "Create", new {URLspillerId = ViewBag.URLspillerId, URLspilId = ViewBag.URLspilId }) |
+    @Html.ActionLink("Back to List", "FnBeregnGennemsnit", new { URLspillerId = ViewBag.URLspillerId, URLspilId = ViewBag.URLspilId }, null)
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_FrameNr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CN_FrameScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSpil.CN_SpilPK)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_FrameNr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CN_FrameScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSpil.CN_SpilPK)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CN_FramePK, URLspillerId = ViewBag.URLspillerId, URLspilId = ViewBag.URLspilId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CN_FramePK, URLspillerId = ViewBag.URLspillerId, URLspilId = ViewBag.URLspilId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CN_FramePK, URLspillerId = ViewBag.URLspillerId, URLspilId = ViewBag.URLspilId })
+        </td>
+    </tr>
+}
+
+</table>
